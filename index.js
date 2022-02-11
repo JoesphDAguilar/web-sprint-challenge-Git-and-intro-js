@@ -300,9 +300,7 @@ function addArtist(array) {
     bio: 'Add 1-2 sentences (or use lorem ipsum'
   });
   return array;
-}
-
-
+};
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -312,8 +310,14 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  const over100Paintings = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].paintings > 100){
+      over100Paintings.push(array[i].name);
+    }
+  }
+  return over100Paintings;
 }
 
 
